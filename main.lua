@@ -1,7 +1,7 @@
 local branch = getgenv().mspaint_dev_mode and "dev" or "main"
 
 local HttpService = game:GetService("HttpService")
-local baseURL = "https://raw.githubusercontent.com/notpoiu/mspaint/" .. branch
+local baseURL = "https://raw.githubusercontent.com/Jar9987/MNHUBV2" .. branch
 
 export type gameMapping = {
     exclusions: table?,
@@ -9,7 +9,7 @@ export type gameMapping = {
 }
 
 if not getgenv().ExecutorSupport then
-    loadstring(game:HttpGet(baseURL .. "/executorTest.lua"))()
+    loadstring(game:HttpGet(baseURL .. "/refs/heads/main/executorTest.lua"))()
 end
 
 if not getgenv().BloxstrapRPC then
